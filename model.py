@@ -20,7 +20,7 @@ for i in range(1,11):
 # make an inertia plot
 fig, ax = plt.subplots(figsize=(8, 4))
 sns.lineplot(x=list(range(1, 11)), y=clusters, ax=ax)
-ax.set_title('Cari Elbow')
+ax.set_title('Find Elbow')
 ax.set_xlabel('Clusters')
 ax.set_ylabel('Inertia')
 
@@ -31,5 +31,5 @@ X['Labels'] = km5.labels_
 plt.figure(figsize=(8,4))
 sns.scatterplot(X['annual_income'], X['spending_score'], hue=X['Labels'],
                 palette=sns.color_palette('hls', 5))
-plt.title('KMeans dengan 5 Cluster')
+plt.title('KMeans with 5 Cluster')
 plt.show()
